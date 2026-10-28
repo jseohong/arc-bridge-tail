@@ -1,0 +1,10 @@
+package lcm_msgs;
+struct rsrr_arm_state_t {
+    int64_t timestamp;
+
+    double qj_tau[8];
+    double qj_pos[8];
+    double qj_vel[8];
+
+    double ft_sensor[6];
+}

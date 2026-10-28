@@ -1,0 +1,158 @@
+<mujoco model="rsrr_urdf">
+  <compiler angle="radian" meshdir="meshes/"/>
+  <option>
+    <flag contact = 'disable'/>
+  </option>
+  
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="-130" elevation="-20"/>
+  </visual>
+
+  
+  <default>
+    <motor ctrlrange="-8 8"/>
+    <equality solref='0.00000001 1'/>
+  </default>
+
+  <contact>
+    <exclude body1 = 'world' body2 = 'left_mid' />
+    <exclude body1 = 'world' body2 = 'right_mid'/>
+    <exclude body1 = 'world' body2 = 'main_mid' />
+    <exclude body1 = 'right_rod' body2 = 'motor_right' />
+    <exclude body1 = 'left_rod' body2 = 'motor_left' />
+    <exclude body1 = 'motor_right' body2 = 'main_mid' />
+    <exclude body1 = 'motor_left' body2 = 'main_mid' />
+    <exclude body1 = 'left_mid' body2 = 'left_rod' />
+    <exclude body1 = 'right_mid' body2 = 'right_rod' />
+    <exclude body1 = 'main_mid' body2 = 'main_rod' />
+  </contact>
+
+  <equality>
+    <connect site1 = 'P1L' site2 = 'P2L'/>
+    <connect site1 = 'P1R' site2 = 'P2R'/>
+  </equality>
+
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="base_link.STL"/>
+    <mesh name="left_mid" content_type="model/stl" file="left_mid.STL"/>
+    <mesh name="left_rod" content_type="model/stl" file="left_rod.STL"/>
+    <mesh name="right_mid" content_type="model/stl" file="right_mid.STL"/>
+    <mesh name="right_rod" content_type="model/stl" file="right_rod.STL"/>
+    <mesh name="main_mid" content_type="model/stl" file="main_mid.STL"/>
+    <mesh name="main_rod" content_type="model/stl" file="main_rod.STL"/>
+    <mesh name="motor_left" content_type="model/stl" file="motor_left.STL"/>
+    <mesh name="motor_right" content_type="model/stl" file="motor_right.STL"/>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3"
+      markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+  </asset>
+
+  <actuator>
+    <motor name="motor_left" joint="theta1" />
+    <motor name="motor_right" joint="theta2" />
+    <motor joint="phi1" />
+    <motor joint="phi2" />
+    <motor joint="psi1" />
+    <motor joint="psi2" />
+    <motor joint="alpha1" />
+    <motor joint="alpha2" />
+  </actuator>
+  
+  <sensor>
+    <jointpos name="theta1_pos" joint="theta1" noise="0"/>
+    <jointpos name="theta2_pos" joint="theta2" noise="0"/>
+    <jointpos name="phi1_pos" joint="phi1" noise="0"/>
+    <jointpos name="phi2_pos" joint="phi2" noise="0"/>
+    <jointpos name="psi1_pos" joint="psi1" noise="0"/>
+    <jointpos name="psi2_pos" joint="psi2" noise="0"/>
+    <jointpos name="alpha1_pos" joint="alpha1" noise="0"/>
+    <jointpos name="alpha2_pos" joint="alpha2" noise="0"/>
+
+    <jointvel name="theta1_vel" joint="theta1" noise="0"/>
+    <jointvel name="theta2_vel" joint="theta2" noise="0"/>
+    <jointvel name="phi1_vel" joint="phi1" noise="0"/>
+    <jointvel name="phi2_vel" joint="phi2" noise="0"/>
+    <jointvel name="psi1_vel" joint="psi1" noise="0"/>
+    <jointvel name="psi2_vel" joint="psi2" noise="0"/>
+    <jointvel name="alpha1_vel" joint="alpha1" noise="0"/>
+    <jointvel name="alpha2_vel" joint="alpha2" noise="0"/>
+
+    <jointactuatorfrc name="theta1_torque" joint="theta1" noise="0"/>
+    <jointactuatorfrc name="theta2_torque" joint="theta2" noise="0"/>
+    <jointactuatorfrc name="psi1_torque" joint="psi1" noise="0"/>
+    <jointactuatorfrc name="psi2_torque" joint="psi2" noise="0"/>
+    <jointactuatorfrc name="phi1_torque" joint="phi1" noise="0"/>
+    <jointactuatorfrc name="phi2_torque" joint="phi2" noise="0"/>
+    <jointactuatorfrc name="alpha1_torque" joint="alpha1" noise="0"/>
+    <jointactuatorfrc name="alpha2_torque" joint="alpha2" noise="0"/>
+
+    <force name="force" site="ft_sensor" />
+    <torque name="torque" site="ft_sensor" />
+  </sensor>
+
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" pos='0 0 -.5'size="0 0 0.05" type="plane" material="groundplane"/>
+    <body name="base" pos="0 0 0" quat="0.5 0.5 0.5 0.5">
+    <site name="ft_sensor" pos="0 0 0" quat="0.5 -0.5 -0.5 -0.5"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="base_link"/>
+    <geom type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="base_link"/>
+    <body name="left_mid" pos="-0.02 0.03 0">
+      <inertial pos="-9.7611e-08 0 0.0016437" quat="1 -7.70125e-05 9.5208e-09 0.000123627" mass="0.0077202" diaginertia="1.3182e-07 1.1908e-07 9.0186e-08"/>
+      <joint name="phi1" pos="0 0 0" axis="0 1 0" range="-1.5707 1.5707"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.64706 0.61961 0.58824 1" mesh="left_mid"/>
+      <geom type="mesh" rgba="0.64706 0.61961 0.58824 1" mesh="left_mid"/>
+      <body name="left_rod" pos="0 0 0.014">
+        <inertial pos="-9.6288e-10 -3.389e-08 0.078858" quat="0.707107 0 0 0.707107" mass="0.015417" diaginertia="4.2268e-05 4.2245e-05 1.474e-07"/>
+        <joint name="phi2" pos="0 0 0" axis="1 0 0" range="-1.5707 1.5707"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.64706 0.61961 0.58824 1" mesh="left_rod"/>
+        <geom type="mesh" rgba="0.64706 0.61961 0.58824 1" mesh="left_rod"/>
+        <site name='P2L' pos ='0 0 0.28825'/>
+      </body>
+    </body>
+    <body name="right_mid" pos="0.02 0.03 0">
+      <inertial pos="-1.036e-07 0 0.0016437" quat="1 -7.59829e-05 8.55466e-09 0.000112587" mass="0.0077202" diaginertia="1.3182e-07 1.1908e-07 9.0186e-08"/>
+      <joint name="psi1" pos="0 0 0" axis="0 1 0" range="-1.5707 1.5707"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.64706 0.61961 0.58824 1" mesh="right_mid"/>
+      <geom type="mesh" rgba="0.64706 0.61961 0.58824 1" mesh="right_mid"/>
+      <body name="right_rod" pos="0 0 0.014">
+        <inertial pos="-8.9707e-10 -5.8694e-08 0.094845" quat="0.707107 0 0 0.707107" mass="0.016548" diaginertia="6.4693e-05 6.467e-05 1.5249e-07"/>
+        <joint name="psi2" pos="0 0 0" axis="1 0 0" range="-1.5707 1.5707"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.64706 0.61961 0.58824 1" mesh="right_rod"/>
+        <geom type="mesh" rgba="0.64706 0.61961 0.58824 1" mesh="right_rod"/>
+        <site name='P2R' pos ='0 0 0.32825'/>
+      </body>
+    </body>
+    <body name="main_mid">
+      <inertial pos="1.7091e-07 0 0.0014798" quat="0.707038 0.707176 -1.93018e-05 -1.93056e-05" mass="0.016979" diaginertia="5.3266e-07 4.0061e-07 3.4438e-07"/>
+      <joint name="alpha1" pos="0 0 0" axis="0 1 0" range="-1.5707 1.5707"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.64706 0.61961 0.58824 1" mesh="main_mid"/>
+      <geom type="mesh" rgba="0.64706 0.61961 0.58824 1" mesh="main_mid"/>
+      <body name="main_rod" pos="0 0 0.015">
+        <inertial pos="2.6619e-10 -0.017234 0.27696" quat="0.999912 0.0131594 0.00160446 2.11155e-05" mass="0.25186" diaginertia="0.000779037 0.000657811 0.000137153"/>
+        <joint name="alpha2" pos="0 0 0" axis="1 0 0" range="-1.5707 1.5707"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.64706 0.61961 0.58824 1" mesh="main_rod"/>
+        <geom type="mesh" rgba="0.64706 0.61961 0.58824 1" mesh="main_rod"/>
+        <body name="motor_left" pos="0 0 0.285">
+          <inertial pos="-0.018088 0.0089832 4.1527e-09" quat="0.707105 0.707105 -0.00168255 -0.00168255" mass="0.004295" diaginertia="8.56776e-07 7.1495e-07 1.52664e-07"/>
+          <joint name="theta1" pos="0 0 0" axis="1 0 0" range="-1.5707 1.5707" damping="0.1" armature="0.01" frictionloss="0.2"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.89804 0.91765 0.92941 1" mesh="motor_left"/>
+          <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="motor_left"/>
+          <site name='P1L' pos ='-0.0128 0.030 0'/>
+        </body>
+        <body name="motor_right" pos="0 -0.0010529 0.325">
+          <inertial pos="0.018088 0.0089832 -3.9744e-09" quat="0.707105 0.707105 0.00168255 0.00168255" mass="0.004295" diaginertia="8.56776e-07 7.1495e-07 1.52664e-07"/>
+          <joint name="theta2" pos="0 0 0" axis="1 0 0" range="-1.5707 1.5707" damping="0.1" armature="0.01" frictionloss="0.2"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.89804 0.91765 0.92941 1" mesh="motor_right"/>
+          <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="motor_right"/>
+          <site name='P1R' pos ='0.0128 0.030 0'/>
+        </body>
+      </body>
+    </body>
+    </body>
+  </worldbody>
+</mujoco>

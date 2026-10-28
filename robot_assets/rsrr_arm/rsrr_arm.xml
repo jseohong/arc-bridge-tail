@@ -1,0 +1,224 @@
+<mujoco model="c_6_Axis_Testing_Fixture_Dynamic">
+  <compiler angle="radian" autolimits="true" meshdir="assets" />
+  <option gravity="0 0 -9.81">
+    <flag contact="disable" />
+  </option>
+  <default>
+    <geom contype="2" conaffinity="1" />
+    <motor ctrlrange="-8 8" />
+    <equality solref="0.00000001 1" />
+  </default>
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.1 0.15 0.2" width="300" height="300"/>
+    <material name="grid" texture="grid" texrepeat="5 5" reflectance="0.2"/>
+    <mesh name="Sensor_Base_Export_2_0" file="Sensor_Base_Export_2_0.stl" />
+    <mesh name="Sensor_Base_Export_2_1" file="Sensor_Base_Export_2_1.stl" />
+    <mesh name="Lower_Rod_Connector_Export_1_2" file="Lower_Rod_Connector_Export_1_2.stl" />
+    <mesh name="Lower_Rod_Connector_Export_1_3" file="Lower_Rod_Connector_Export_1_3.stl" />
+    <mesh name="Lower_Clevis_End_Export_1_4" file="Lower_Clevis_End_Export_1_4.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_5" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_5.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_6" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_6.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_7" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_7.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_8" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_8.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_9" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_9.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_10" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_10.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_11" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_11.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_12" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_12.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_13" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_13.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_14" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_14.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_15" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_15.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_16" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_16.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_17" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_17.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_18" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_18.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_19" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_19.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_20" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_20.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_21" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_21.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_22" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_22.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_23" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_23.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_24" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_24.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_25" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_25.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_26" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_26.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_27" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_27.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_28" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_28.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_29" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_29.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_30" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_30.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_31" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_31.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_32" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_32.stl" inertia="shell" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_33" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_33.stl" inertia="shell" />
+    <mesh name="Motor_Mount_Left_1_34" file="Motor_Mount_Left_1_34.stl" />
+    <mesh name="Motor_Mount_Left_1_2_35" file="Motor_Mount_Left_1_2_35.stl" />
+    <mesh name="Lower_Clevis_End_Export_1_36" file="Lower_Clevis_End_Export_1_36.stl" />
+    <mesh name="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_37" file="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_37.stl" />
+    <mesh name="Motor_Mount_Left_1_38" file="Motor_Mount_Left_1_38.stl" />
+    <mesh name="Motor_Mount_Left_1_2_39" file="Motor_Mount_Left_1_2_39.stl" />
+    <mesh name="Motor_Head_1_40" file="Motor_Head_1_40.stl" />
+    <mesh name="Motor_Head_1_41" file="Motor_Head_1_41.stl" />
+    <mesh name="Motor_Head_1_2_42" file="Motor_Head_1_2_42.stl" />
+    <mesh name="Motor_Head_1_2_43" file="Motor_Head_1_2_43.stl" />
+    <mesh name="Upper_Rod_Connector_Export_1_44" file="Upper_Rod_Connector_Export_1_44.stl" />
+    <mesh name="Upper_Rod_Connector_Export_1_45" file="Upper_Rod_Connector_Export_1_45.stl" />
+    <mesh name="Upper_Clevis_End_Export_1_2_46" file="Upper_Clevis_End_Export_1_2_46.stl" />
+    <mesh name="c_89965K233_General_Purpose_Aluminum_Tubing_1_2_47" file="c_89965K233_General_Purpose_Aluminum_Tubing_1_2_47.stl" />
+    <mesh name="c_59935K12_Ball_Joint_Rod_End_1_2_48" file="c_59935K12_Ball_Joint_Rod_End_1_2_48.stl" />
+    <mesh name="Upper_Clevis_End_Export_1_2_49" file="Upper_Clevis_End_Export_1_2_49.stl" />
+    <mesh name="c_89965K233_General_Purpose_Aluminum_Tubing_1_2_50" file="c_89965K233_General_Purpose_Aluminum_Tubing_1_2_50.stl" />
+    <mesh name="c_59935K12_Ball_Joint_Rod_End_1_2_51" file="c_59935K12_Ball_Joint_Rod_End_1_2_51.stl" />
+    <mesh name="Upper_Rod_Connector_Export_1_2_52" file="Upper_Rod_Connector_Export_1_2_52.stl" />
+    <mesh name="Upper_Rod_Connector_Export_1_2_53" file="Upper_Rod_Connector_Export_1_2_53.stl" />
+    <mesh name="Upper_Clevis_End_Export_1_54" file="Upper_Clevis_End_Export_1_54.stl" />
+    <mesh name="c_89965K233_General_Purpose_Aluminum_Tubing_1_55" file="c_89965K233_General_Purpose_Aluminum_Tubing_1_55.stl" />
+    <mesh name="c_59935K12_Ball_Joint_Rod_End_1_56" file="c_59935K12_Ball_Joint_Rod_End_1_56.stl" />
+    <mesh name="Upper_Clevis_End_Export_1_57" file="Upper_Clevis_End_Export_1_57.stl" />
+    <mesh name="c_89965K233_General_Purpose_Aluminum_Tubing_1_58" file="c_89965K233_General_Purpose_Aluminum_Tubing_1_58.stl" />
+    <mesh name="c_59935K12_Ball_Joint_Rod_End_1_59" file="c_59935K12_Ball_Joint_Rod_End_1_59.stl" />
+  </asset>
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" directional="true" />
+    <geom name="ground" type="plane" size="5 5 0.1" contype="1" conaffinity="1" material="grid" />
+    <body name="base_link" pos="0 0 0">
+      <inertial pos="0.00375728545 -4.44185921e-08 0.0721810643" mass="0.389926" diaginertia="0.000233855703 0.000618286297 0.000635766" quat="-0.481421327 0.48141792 0.517916774 0.517911679" />
+      <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Sensor_Base_Export_2_0" rgba="0.894117647 0.894117647 0.894117647 1" name="base_link_visual0" />
+      <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Sensor_Base_Export_2_1" rgba="0.4 0.4 0.4 1" name="base_link_collision0" />
+      <body name="Lower_Rod_Connector_Export_1" pos="0.0435 -2.75215578e-07 0.065" quat="0.707109018 0 0 0.707104544">
+        <joint name="alpha1" pos="0 0 0" axis="0 0 -1" type="hinge" range="-1.57079633 1.57079633" damping="3.18471338" />
+        <inertial pos="-6.79410794e-15 -0.00647385714 0.008" mass="0.00425441" diaginertia="1.43229e-07 3.03849e-07 3.36498e-07" quat="0.707106781 1.91351335e-17 2.08038397e-18 -0.707106781" />
+        <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Lower_Rod_Connector_Export_1_2" rgba="0.894117647 0.894117647 0.894117647 1" name="Lower_Rod_Connector_Export_1_visual0" />
+        <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Lower_Rod_Connector_Export_1_3" rgba="0.4 0.4 0.4 1" name="Lower_Rod_Connector_Export_1_collision0" />
+        <body name="Lower_Clevis_End_Export_1" pos="-0.01575 -0.015 0.008" quat="1 0 0 0">
+          <joint name="alpha2" pos="0 0 0" axis="1 0 0" type="hinge" range="-1.44862 1.44862" damping="3.18471338" />
+          <inertial pos="0.015745623 -0.264222451 -0.00861758562" mass="0.1329867" diaginertia="5.32349956e-05 0.00172189924 0.00172369323" quat="0.706505671 -0.00550206667 -0.0301067918 0.707045292" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Lower_Clevis_End_Export_1_4" rgba="0.894117647 0.894117647 0.894117647 1" name="Lower_Clevis_End_Export_1_visual0" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_5" rgba="0.0470588235 0.0470588235 0.0470588235 1" name="Lower_Clevis_End_Export_1_visual1" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_6" rgba="0.0509803922 0.0509803922 0.0509803922 1" name="Lower_Clevis_End_Export_1_visual2" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_7" rgba="0.0549019608 0.0549019608 0.0549019608 1" name="Lower_Clevis_End_Export_1_visual3" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_8" rgba="0.0588235294 0.0588235294 0.0588235294 1" name="Lower_Clevis_End_Export_1_visual4" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_9" rgba="0.062745098 0.062745098 0.062745098 1" name="Lower_Clevis_End_Export_1_visual5" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_10" rgba="0.0666666667 0.0666666667 0.0666666667 1" name="Lower_Clevis_End_Export_1_visual6" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_11" rgba="0.0705882353 0.0705882353 0.0705882353 1" name="Lower_Clevis_End_Export_1_visual7" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_12" rgba="0.329411765 0.329411765 0.329411765 1" name="Lower_Clevis_End_Export_1_visual8" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_13" rgba="0.333333333 0.333333333 0.333333333 1" name="Lower_Clevis_End_Export_1_visual9" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_14" rgba="0.337254902 0.337254902 0.337254902 1" name="Lower_Clevis_End_Export_1_visual10" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_15" rgba="0.345098039 0.345098039 0.345098039 1" name="Lower_Clevis_End_Export_1_visual11" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_16" rgba="0.349019608 0.349019608 0.349019608 1" name="Lower_Clevis_End_Export_1_visual12" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_17" rgba="0.352941176 0.352941176 0.352941176 1" name="Lower_Clevis_End_Export_1_visual13" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_18" rgba="0.364705882 0.364705882 0.364705882 1" name="Lower_Clevis_End_Export_1_visual14" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_19" rgba="0.368627451 0.368627451 0.368627451 1" name="Lower_Clevis_End_Export_1_visual15" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_20" rgba="0.37254902 0.37254902 0.37254902 1" name="Lower_Clevis_End_Export_1_visual16" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_21" rgba="0.376470588 0.376470588 0.376470588 1" name="Lower_Clevis_End_Export_1_visual17" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_22" rgba="0.380392157 0.380392157 0.380392157 1" name="Lower_Clevis_End_Export_1_visual18" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_23" rgba="0.658823529 0.658823529 0.658823529 1" name="Lower_Clevis_End_Export_1_visual19" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_24" rgba="0.662745098 0.662745098 0.662745098 1" name="Lower_Clevis_End_Export_1_visual20" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_25" rgba="0.666666667 0.666666667 0.666666667 1" name="Lower_Clevis_End_Export_1_visual21" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_26" rgba="0.670588235 0.670588235 0.670588235 1" name="Lower_Clevis_End_Export_1_visual22" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_27" rgba="0.678431373 0.678431373 0.678431373 1" name="Lower_Clevis_End_Export_1_visual23" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_28" rgba="0.682352941 0.682352941 0.682352941 1" name="Lower_Clevis_End_Export_1_visual24" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_29" rgba="0.68627451 0.68627451 0.68627451 1" name="Lower_Clevis_End_Export_1_visual25" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_30" rgba="0.694117647 0.694117647 0.694117647 1" name="Lower_Clevis_End_Export_1_visual26" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_31" rgba="0.992156863 0.992156863 0.992156863 1" name="Lower_Clevis_End_Export_1_visual27" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_32" rgba="0.996078431 0.996078431 0.996078431 1" name="Lower_Clevis_End_Export_1_visual28" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_33" rgba="1 1 1 1" name="Lower_Clevis_End_Export_1_visual29" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Motor_Mount_Left_1_34" rgba="0.894117647 0.894117647 0.894117647 1" name="Lower_Clevis_End_Export_1_visual30" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Motor_Mount_Left_1_2_35" rgba="0.894117647 0.894117647 0.894117647 1" name="Lower_Clevis_End_Export_1_visual31" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Lower_Clevis_End_Export_1_36" rgba="0.4 0.4 0.4 1" name="Lower_Clevis_End_Export_1_collision0" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="c_5287T655_High_Strength_Lightweight_Carbon_Fiber_Tube_1_37" rgba="0.4 0.4 0.4 1" name="Lower_Clevis_End_Export_1_collision1" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Motor_Mount_Left_1_38" rgba="0.4 0.4 0.4 1" name="Lower_Clevis_End_Export_1_collision2" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Motor_Mount_Left_1_2_39" rgba="0.4 0.4 0.4 1" name="Lower_Clevis_End_Export_1_collision3" />
+          <body name="Motor_Head_1" pos="0.00174999992 -0.329894864 -1.0136145e-11" quat="1 -1.50298545e-22 -1.48018876e-12 -1.004873e-10">
+            <joint name="theta1" pos="0 0 0" axis="-1 0 0" type="hinge" range="-1.74533 1.74533" damping="3.18471338" />
+            <inertial pos="-0.000270283198 -7.07528634e-15 0.00199625871" mass="0.00624941" diaginertia="4.99762188e-07 7.79284e-07 1.10960981e-06" quat="0.675391209 -3.87442666e-13 -0.737459636 -3.55305252e-13" />
+            <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Motor_Head_1_40" rgba="0.894117647 0.894117647 0.894117647 1" name="Motor_Head_1_visual0" />
+            <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Motor_Head_1_41" rgba="0.4 0.4 0.4 1" name="Motor_Head_1_collision0" />
+            <site name="P1L" pos="0.009450 -0.000000 0.030000" size="0.004" rgba="1 0 0 1" />
+          </body>
+          <body name="Motor_Head_2" pos="0.0297499999 -0.299894865 -1.70228863e-11" quat="1 1.21184321e-19 4.10206736e-10 -2.94370685e-10">
+            <joint name="theta2" pos="0 0 0" axis="1 0 0" type="hinge" range="-1.74533 1.74533" damping="3.18471338" />
+            <inertial pos="0.000270283198 7.07601278e-15 0.00199625871" mass="0.00624941" diaginertia="4.99762188e-07 7.79284e-07 1.10960981e-06" quat="3.87724022e-13 -0.675391209 3.55226844e-13 0.737459636" />
+            <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Motor_Head_1_2_42" rgba="0.894117647 0.894117647 0.894117647 1" name="Motor_Head_2_visual0" />
+            <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Motor_Head_1_2_43" rgba="0.4 0.4 0.4 1" name="Motor_Head_2_collision0" />
+            <site name="P1R" pos="-0.009450 0.000000 0.030000" size="0.004" rgba="0 0 1 1" />
+          </body>
+        </body>
+      </body>
+      <body name="Upper_Rod_Connector_Export_1" pos="0.0424999759 -0.00381727962 0.103" quat="0.707109018 0 0 0.707104544">
+        <joint name="phi1" pos="0 0 0" axis="1 0 0" type="hinge" range="-1.0472 1.0472" damping="3.18471338" />
+        <inertial pos="0.0238170107 -0.00358469954 4.93979857e-14" mass="0.00199489" diaginertia="5.16317e-08 8.61859e-08 1.01847e-07" quat="0.5 0.5 -0.5 -0.5" />
+        <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Upper_Rod_Connector_Export_1_44" rgba="0.894117647 0.894117647 0.894117647 1" name="Upper_Rod_Connector_Export_1_visual0" />
+        <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Upper_Rod_Connector_Export_1_45" rgba="0.4 0.4 0.4 1" name="Upper_Rod_Connector_Export_1_collision0" />
+        <body name="Upper_Clevis_End_Export_2" pos="0.0238170107 -0.01 -0.022" quat="1 0 0 0">
+          <joint name="phi2" pos="0 0 0" axis="0 0 1" type="hinge" range="-1.0472 1.0472" damping="3.18471338" />
+          <inertial pos="-0.00543239333 -0.107556325 0.0220000186" mass="0.014466072" diaginertia="7.02829364e-07 0.000178953646 0.000179336823" quat="-0.48782384 0.486627226 -0.511825957 0.513084821" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Upper_Clevis_End_Export_1_2_46" rgba="0.894117647 0.894117647 0.894117647 1" name="Upper_Clevis_End_Export_2_visual0" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_89965K233_General_Purpose_Aluminum_Tubing_1_2_47" rgba="0.752941176 0.752941176 0.752941176 1" name="Upper_Clevis_End_Export_2_visual1" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_59935K12_Ball_Joint_Rod_End_1_2_48" rgba="0.752941176 0.752941176 0.752941176 1" name="Upper_Clevis_End_Export_2_visual2" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Upper_Clevis_End_Export_1_2_49" rgba="0.4 0.4 0.4 1" name="Upper_Clevis_End_Export_2_collision0" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="c_89965K233_General_Purpose_Aluminum_Tubing_1_2_50" rgba="0.4 0.4 0.4 1" name="Upper_Clevis_End_Export_2_collision1" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="c_59935K12_Ball_Joint_Rod_End_1_2_51" rgba="0.4 0.4 0.4 1" name="Upper_Clevis_End_Export_2_collision2" />
+          <site name="P2R" pos="-0.015450 -0.305895 0.022000" size="0.004" rgba="0 0 1 1" />
+        </body>
+      </body>
+      <body name="Upper_Rod_Connector_Export_2" pos="0.0425000242 0.00381674184 0.103" quat="0.707109018 0 0 0.707104544">
+        <joint name="psi1" pos="0 0 0" axis="-1 0 0" type="hinge" range="-1.0472 1.0472" damping="3.18471338" />
+        <inertial pos="-0.0238170107 -0.00358469954 6.80705492e-15" mass="0.00199489" diaginertia="5.16317e-08 8.61859e-08 1.01847e-07" quat="0.5 0.5 0.5 0.5" />
+        <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Upper_Rod_Connector_Export_1_2_52" rgba="0.894117647 0.894117647 0.894117647 1" name="Upper_Rod_Connector_Export_2_visual0" />
+        <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Upper_Rod_Connector_Export_1_2_53" rgba="0.4 0.4 0.4 1" name="Upper_Rod_Connector_Export_2_collision0" />
+        <body name="Upper_Clevis_End_Export_1" pos="-0.0238170107 -0.01 0.022" quat="1 0 0 0">
+          <joint name="psi2" pos="0 0 0" axis="0 0 -1" type="hinge" range="-1.0472 1.0472" damping="3.18471338" />
+          <inertial pos="0.00500496292 -0.108811041 -0.0219999771" mass="0.014466072" diaginertia="7.02829462e-07 0.000186350355 0.000186734152" quat="0.510898886 -0.511816616 0.488815825 -0.487939719" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="Upper_Clevis_End_Export_1_54" rgba="0.894117647 0.894117647 0.894117647 1" name="Upper_Clevis_End_Export_1_visual0" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_89965K233_General_Purpose_Aluminum_Tubing_1_55" rgba="0.752941176 0.752941176 0.752941176 1" name="Upper_Clevis_End_Export_1_visual1" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="2" contype="0" conaffinity="0" type="mesh" mesh="c_59935K12_Ball_Joint_Rod_End_1_56" rgba="0.752941176 0.752941176 0.752941176 1" name="Upper_Clevis_End_Export_1_visual2" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="Upper_Clevis_End_Export_1_57" rgba="0.4 0.4 0.4 1" name="Upper_Clevis_End_Export_1_collision0" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="c_89965K233_General_Purpose_Aluminum_Tubing_1_58" rgba="0.4 0.4 0.4 1" name="Upper_Clevis_End_Export_1_collision1" />
+          <geom pos="0 0 0" quat="1 0 0 0" group="3" type="mesh" mesh="c_59935K12_Ball_Joint_Rod_End_1_59" rgba="0.4 0.4 0.4 1" name="Upper_Clevis_End_Export_1_collision2" />
+          <site name="P2L" pos="0.015450 -0.335895 -0.022000" size="0.004" rgba="1 0 0 1" />
+        </body>
+      </body>
+      <site name="ft_sensor" pos="0 0 0" />
+    </body>
+  </worldbody>
+  <keyframe>
+    <key name="home" qpos="0 0 0 0 0 0 0 0" />
+  </keyframe>
+  <equality>
+    <connect site1="P1L" site2="P2L" />
+    <connect site1="P1R" site2="P2R" />
+  </equality>
+  <actuator>
+    <motor name="motor_left" joint="theta1" />
+    <motor name="motor_right" joint="theta2" />
+    <motor joint="phi1" />
+    <motor joint="phi2" />
+    <motor joint="psi1" />
+    <motor joint="psi2" />
+    <motor joint="alpha1" />
+    <motor joint="alpha2" />
+  </actuator>
+  <sensor>
+    <jointpos name="theta1_pos" joint="theta1" noise="0" />
+    <jointpos name="theta2_pos" joint="theta2" noise="0" />
+    <jointpos name="phi1_pos" joint="phi1" noise="0" />
+    <jointpos name="phi2_pos" joint="phi2" noise="0" />
+    <jointpos name="psi1_pos" joint="psi1" noise="0" />
+    <jointpos name="psi2_pos" joint="psi2" noise="0" />
+    <jointpos name="alpha1_pos" joint="alpha1" noise="0" />
+    <jointpos name="alpha2_pos" joint="alpha2" noise="0" />
+    <jointvel name="theta1_vel" joint="theta1" noise="0" />
+    <jointvel name="theta2_vel" joint="theta2" noise="0" />
+    <jointvel name="phi1_vel" joint="phi1" noise="0" />
+    <jointvel name="phi2_vel" joint="phi2" noise="0" />
+    <jointvel name="psi1_vel" joint="psi1" noise="0" />
+    <jointvel name="psi2_vel" joint="psi2" noise="0" />
+    <jointvel name="alpha1_vel" joint="alpha1" noise="0" />
+    <jointvel name="alpha2_vel" joint="alpha2" noise="0" />
+    <jointactuatorfrc name="theta1_torque" joint="theta1" noise="0" />
+    <jointactuatorfrc name="theta2_torque" joint="theta2" noise="0" />
+    <jointactuatorfrc name="phi1_torque" joint="phi1" noise="0" />
+    <jointactuatorfrc name="phi2_torque" joint="phi2" noise="0" />
+    <jointactuatorfrc name="psi1_torque" joint="psi1" noise="0" />
+    <jointactuatorfrc name="psi2_torque" joint="psi2" noise="0" />
+    <jointactuatorfrc name="alpha1_torque" joint="alpha1" noise="0" />
+    <jointactuatorfrc name="alpha2_torque" joint="alpha2" noise="0" />
+    <force name="force" site="ft_sensor" />
+    <torque name="torque" site="ft_sensor" />
+  </sensor>
+</mujoco>

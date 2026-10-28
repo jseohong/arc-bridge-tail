@@ -1,0 +1,11 @@
+package lcm_msgs;
+struct rsrr_arm_control_t {
+    int64_t timestamp;
+
+    double qj_tau[8];
+    double qj_pos[8];
+    double qj_vel[8];
+
+    double kp[8];
+    double kd[8];
+}

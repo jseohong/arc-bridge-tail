@@ -20,6 +20,7 @@ class Config:
         "biped_pointfoot":  "BipedPointfoot/biped_pointfoot_scene.xml",
         "biped_linefoot":   "BipedLinefoot/biped_linefoot_scene.xml",
         # "arm2link":         "Arm2Link/arm2link_sensing.xml",
+        "rsrr_arm"  :       "rsrr_arm/rsrr_arm.xml",
         "rsrr_tail" :       "RSRR_tail/rsrr_urdf.xml",
         "sfb_tail" :        "SFB_tail/sfb_urdf.xml"
     }
